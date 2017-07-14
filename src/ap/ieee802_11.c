@@ -1893,7 +1893,7 @@ static void handle_assoc_cb(struct hostapd_data *hapd,
 	int new_assoc = 1;
 	struct ieee80211_ht_capabilities ht_cap;
 	struct ieee80211_vht_capabilities vht_cap;
-
+    int set = 1;
 	if (len < IEEE80211_HDRLEN + (reassoc ? sizeof(mgmt->u.reassoc_resp) :
 				      sizeof(mgmt->u.assoc_resp))) {
 		wpa_printf(MSG_INFO, "handle_assoc_cb(reassoc=%d) - too short payload (len=%lu)",
